@@ -1,5 +1,5 @@
-const equation = document.getElementById("display");
 const result = document.getElementById("resultField");
+const equation = document.getElementById("equationField");
 
 function UpdateDisplay(buttonValue) {
 	equation.textContent += `${buttonValue}`;

@@ -7,25 +7,41 @@
 		<title>Odin Calculator</title>
 	</head>
 	<body>
-        <div id="display"></div>
-		<div id="resultField">0</div>
+		<div id="display">
+			<div id="resultField">0</div>
+			<div id="equationField"></div>
+		</div>
 		<div id="keypad">
-			<div><button id="num_0" class="number" onclick="UpdateDisplay(0)">0</button></div>
-			<div><button id="num_1" class="number" onclick="UpdateDisplay(1)">1</button></div>
-			<div><button id="num_2" class="number" onclick="UpdateDisplay(2)">2</button></div>
-			<div><button id="num_3" class="number" onclick="UpdateDisplay(3)">3</button></div>
-			<div><button id="num_4" class="number" onclick="UpdateDisplay(4)">4</button></div>
-			<div><button id="num_5" class="number" onclick="UpdateDisplay(5)">5</button></div>
-			<div><button id="num_6" class="number" onclick="UpdateDisplay(6)">6</button></div>
-			<div><button id="num_7" class="number" onclick="UpdateDisplay(7)">7</button></div>
-			<div><button id="num_8" class="number" onclick="UpdateDisplay(8)">8</button></div>
-			<div><button id="num_9" class="number" onclick="UpdateDisplay(9)">9</button></div>
-			<div><button id="opp_+"class="operation" onclick="UpdateDisplay(' + ')">+</button></div>
-			<div><button id="opp_-"class="operation" onclick="UpdateDisplay(' - ')">-</button></div>
-			<div><button id="opp_x"class="operation" onclick="UpdateDisplay(' x ')">x</button></div>
-			<div><button id="opp_/"class="operation" onclick="UpdateDisplay(' / ')">&#247</button></div>
-            <div><button onclick="Operate()">=</button></div>
-            <div><button id="clear" onclick="Clear()">CLEAR</button></div>
+			<div>
+				<div id="row_1">
+					<div><button id="num_1" class="number keys" onclick="UpdateDisplay(1)">1</button></div>
+					<div><button id="num_2" class="number keys" onclick="UpdateDisplay(2)">2</button></div>
+					<div><button id="num_3" class="number keys" onclick="UpdateDisplay(3)">3</button></div>
+				</div>
+				<div id="row_2">
+					<div><button id="num_4" class="number keys" onclick="UpdateDisplay(4)">4</button></div>
+					<div><button id="num_5" class="number keys" onclick="UpdateDisplay(5)">5</button></div>
+					<div><button id="num_6" class="number keys" onclick="UpdateDisplay(6)">6</button></div>
+				</div>
+				<div id="row_3">
+					<div><button id="num_7" class="number keys" onclick="UpdateDisplay(7)">7</button></div>
+					<div><button id="num_8" class="number keys" onclick="UpdateDisplay(8)">8</button></div>
+					<div><button id="num_9" class="number keys" onclick="UpdateDisplay(9)">9</button></div>
+				</div>
+				<div><button id="num_0" class="number keys" onclick="UpdateDisplay(0)">0</button></div>
+			</div>
+			<div>
+				<div><button id="opp_+" class="operation keys"
+						onclick="UpdateDisplay(' + ')">+</button></div>
+				<div><button id="opp_-" class="operation keys"
+						onclick="UpdateDisplay(' - ')">-</button></div>
+				<div><button id="opp_x" class="operation keys"
+						onclick="UpdateDisplay(' x ')">x</button></div>
+				<div><button id="opp_/" class="operation keys"
+						onclick="UpdateDisplay(' / ')">&#247</button></div>
+				<div><button onclick="Operate()" class="keys">=</button></div>
+			</div>
+			<div><button id="clear" onclick="Clear()" class="keys">CLEAR</button></div>
 		</div>
 
 		<script src="../scripts/calculator.js"></script>
