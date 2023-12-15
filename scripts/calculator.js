@@ -52,3 +52,8 @@ function Clear() {
 	equation.textContent = "";
 	result.textContent = "0";
 }
+
+function Delete() {
+	const temp = equation.textContent;
+	equation.textContent = temp.slice(0, -1);
+}
