@@ -13,6 +13,8 @@ body {
     padding: 5px;
 }
 
+/* TODO: Make all buttons bigger */
+
 #keypad {
     width:100%;
     display: flex;
@@ -36,7 +38,7 @@ body {
     height: 30px;
 }
 
-#clear, #delete{
+.keys-big{
     width: 75px;
     height: 30px;
 }

@@ -1,5 +1,6 @@
 const result = document.getElementById("resultField");
 const equation = document.getElementById("equationField");
+// const save = result.textContent;
 
 function UpdateDisplay(buttonValue) {
 	equation.textContent += `${buttonValue}`;
@@ -22,6 +23,11 @@ function Operate() {
 			result.textContent = Multiplication(num1, num2);
 			break;
 		case "/":
+			if ((num1 == 0) || (num2 == 0)) {
+				alert("MATH ERROR: Cannot divide by 0");
+				Clear();
+				break;
+			}
 			result.textContent = Division(num1, num2);
 			break;
 		default:
@@ -45,6 +51,9 @@ function Multiplication(num1, num2) {
 	return parseInt(num1) * parseInt(num2);
 }
 function Division(num1, num2) {
+	// if ((num1 == 0) || (num2 == 0)) {
+	// 	return "MATH ERROR: Cannot divide by 0";
+	// }
 	return parseInt(num1) / parseInt(num2);
 }
 
@@ -56,4 +65,8 @@ function Clear() {
 function Delete() {
 	const temp = equation.textContent;
 	equation.textContent = temp.slice(0, -1);
+}
+
+function Answer() {
+	UpdateDisplay(result.textContent);
 }
